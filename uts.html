@@ -73,7 +73,7 @@
       text-decoration: none;
     }
     .button:hover { background: var(--lime); }
-    .pdf-frame, video {
+    .pdf-frame, .video-frame {
       display: block;
       width: 100%;
       border: 1px solid var(--line);
@@ -81,7 +81,7 @@
       background: #050a08;
     }
     .pdf-frame { height: min(78vh, 900px); }
-    video { max-height: 620px; aspect-ratio: 16 / 9; }
+    .video-frame { height: auto; aspect-ratio: 16 / 9; }
     .fallback { color: var(--muted); }
     .back { display: inline-block; margin-top: 8px; text-decoration: none; }
     footer { padding: 0 0 30px; color: #81958a; font-size: 12px; }
@@ -124,10 +124,13 @@
       <div class="panel-heading">
         <h2 id="video-title">Video UTS</h2>
       </div>
-      <video controls preload="none" playsinline>
-        <source src="./vidio_cv.mp4" type="video/mp4">
-        Your browser does not support HTML video. <a href="./vidio_cv.mp4">Open the video file</a>.
-      </video>
+      <iframe class="video-frame"
+        src="https://www.youtube-nocookie.com/embed/UgHSRYyl3Ys"
+        title="Video UTS Zufakur Dzikir Riyana"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
     </section>
     <a class="back" href="./index.html">← Back to main resume</a>
   </main>
